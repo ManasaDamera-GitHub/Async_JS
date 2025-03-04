@@ -2,11 +2,31 @@ Asynchronous JavaScript is a programming approach that enables the non-blocking 
 operations in web applications, JavaScript is a single-threaded and synchronous language. The code is executed in order one at a time, But Javascript may appear to be asynchronous in some situations.
 
 Blocking Code:
-      Synchronous operations that halt further execution until the current task is finished.Example: A long-running for loop or a synchronous file read in Node.js.
+      Synchronous operations that halt(blocks) further execution until the current task is finished.Example: A long-running for loop or a synchronous file read in Node.js.
 
-Non-Blocking Code:Asynchronous operations that allow other code to run while waiting for the task to complete.
-
-Example: Using setTimeout, Promises, async/await, or callbacks for I/O operations.
-
+Non-Blocking Code:
+      Asynchronous operations that allow other code to run while waiting for the task to complete.Example: Using setTimeout, Promises, async/await, or callbacks for I/O operations.
 
 There are several methods that can be used to perform asynchronous javascript tasks, which are listed below:
+1.using Callbacks 2.using Promises
+
+USING CALLBACKS:
+      Callbacks are functions passed as arguments to other functions and are executed once the asynchronous task is complete.
+SYNTAX:
+      function myFunction(param1, param2, callback) {
+    // Do some work...
+    // Call the callback function
+    callback(result);
+}
+
+Example:
+      function myFunction(callback) { 
+	setTimeout(() => { 
+		const data = { name: "Aman", age: 21 }; 
+		callback(data); 
+	}, 3000); 
+} 
+
+myFunction((data) => { 
+	console.log("Data:", data); 
+});
