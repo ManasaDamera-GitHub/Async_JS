@@ -30,3 +30,5 @@ Example:
 myFunction((data) => { 
 	console.log("Data:", data); 
 });
+
+OUTPUT: Data: { name: 'menny', age: 20 }
